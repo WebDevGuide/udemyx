@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Download Courses with 60% OFF</title>
+</head>
+<body>
+ <nav>
+    <div class="left-nav">
+        <img src="images/logo.png" alt="" class="logo-nav-bar" style="width: 35px; height: 35px;">
+        <h2>UDEMYX</h2>
+    </div>
+    <div class="right-nav">
+        <a href="">SOCIAL MEDIAS</a>
+        <a href="">CONTACT US</a>
+        <a href="https://discord.gg/pnNVveT2"><button class="view-more-courses">GO DISCORD</button></a>
+    </div>
+ </nav>
+
+ <section class="main-page">
+    <div class="left-section">
+        <div class="left-section-text">
+            <h2>
+                Get Udemy Courses for 60% Off!
+            </h2>
+            <p>
+                With UdemyX, you can get paid Udemy Courses <br> For 60% Off Discount, or more <br> Send an Order for a Course Now!
+            </p>
+        </div>
+        
+        <div class="fill-form">
+                <div id="scroll-to-courses">
+                    <img src="images/down_arrow.svg" alt="">
+                    <button>SEE COURSES</button>
+                  </div>                  
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="right-section-image">
+            <img src="images/pages-udemy.png" alt="" >
+        </div>
+        
+    </div>
+
+ </section>
+ 
+ <section class="courses-display">
+    <div class="course-display-header">
+        <h1 class="courses-display-title">Popular <span style="color: #851bef;" id="courses-display-text"></span> Available </h1>
+    </div>
+    <div class="courses-grids">
+        <a href="https://discord.gg/pnNVveT2" ><div class="grid1">
+            <img src="images/icons/trading.svg" alt="">
+            <p>TRADING</p>
+        </div></a>
+        <a href="https://discord.gg/pnNVveT2" ><div class="grid2">
+            <img src="images/icons/bitcoin.svg" alt="">
+            <p>BITCOIN</p>
+
+            
+        </div></a>
+        <a href="https://discord.gg/pnNVveT2"><div class="grid3">
+           <img src="images/icons/python_border.svg" alt="">
+           <p>PYTHON</p>
+        </div></a>
+        <a href="https://discord.gg/pnNVveT2" ><div class="grid4">
+           <img src="images/icons/wordpress.svg" alt="">
+           <p>WORDPRESS</p>
+        </div></a>
+        <a href="https://discord.gg/pnNVveT2" ><div class="grid5">
+           <img src="images/icons/photoshop.svg" alt="">
+           <p>PHOTOShOP</p>
+        </div></a>
+        <a href="https://discord.gg/pnNVveT2" ><div class="grid6">
+           <img src="images/icons/javascript.svg" alt="">
+           <p>JAVASCRIPT</p>
+        </div></a>
+        <a href="https://discord.gg/pnNVveT2" ><div class="grid7">
+           <img src="images/icons/html.svg" alt="">
+           <p>HTML</p>
+        </div></a>
+        <a href="https://discord.gg/pnNVveT2" ><div class="grid8">
+           <img src="images/icons/excel.svg" alt="">
+           <p>OFFICE</p>
+        </div></a>
+    </div>
+    <div class="discord-link">
+        <p>
+            Join us on Discord, our selling platform,<br> to buy courses and get discounts!        </p>
+    <a href="https://discord.gg/pnNVveT2"><button>GO TO DISCORD</button>
+    </a>
+</div>
+ </section>
+
+ <section class="leave-email-for-newsletter">
+  <div class="title-for-newsletter">
+    <p>Our Newsletter</p>
+    <img src="images/forward_arrow.svg" alt="">
+  </div>
+  <div class="comming-soon-newsletter">COMMING SOON...</div>
+  <div class="newsletter-section"></div>
+ </section>
+    
+      <footer>
+        <a href="">
+        <div class="company-name">TAOUFIK'S COMPANY</div>
+        </a>
+    </footer>
+<script src="script.js"></script>
+
+
+<!-- animation on scroll -->
+<script>
+    const box = document.querySelector('.courses-grids');
+
+
+const options = {
+  threshold: 0.5 // the ratio of intersection at which the observer callback should be executed
+};
+
+const observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      box.style.opacity = 1;
+      box.target.style.animation = 'reverse-scroll';
+    } else {
+      box.style.opacity = 0;
+    }
+  });
+}, options);
+
+observer.observe(box);
+
+</script>
+
+<!-- scroll to -->
+<script>
+    const scrollToCoursesBtn = document.querySelector('#scroll-to-courses button');
+
+scrollToCoursesBtn.addEventListener('click', () => {
+  const coursesSection = document.querySelector('.courses-display');
+  coursesSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+</script>
+</body>
+</html>
