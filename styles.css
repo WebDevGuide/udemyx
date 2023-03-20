@@ -49,6 +49,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    zoom: 0.85;
 }
 
 nav {
