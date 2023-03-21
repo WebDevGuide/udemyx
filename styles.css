@@ -1,0 +1,468 @@
+
+.company-name {
+    color: #851bef;
+    text-align: center;
+    letter-spacing: 1vw;
+    font-family: poppins;
+    font-size: 13px;
+    font-weight: 600;
+    width: 100%;
+    height: 20px;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+}
+
+#scroll-div {
+    display: none;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 25px;
+    z-index: 9999;
+    animation: slide-in-right 0.2s ease-in-out forwards;
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+#scroll-div.hide {
+  animation: slide-out-right 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-out-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+#scroll-div img {
+    height: 50px;
+    box-shadow: 10px 10px 63px -37px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 63px -37px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 63px -37px rgba(0,0,0,0.75);
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #851bef;
+    height: 55px;
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 3vw;
+    align-items: center;
+}
+
+.left-nav h2 {
+    font-size: 12px;
+    color: white;
+    margin-left: 2vw;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.left-nav img {
+    box-shadow: 2px 0px 400px -18px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 0px 400px -18px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 0px 400px -18px rgba(0,0,0,0.75);
+border-radius: 10px;
+}
+
+.right-nav {
+    display: block;
+}
+
+.right-nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    cursor: not-allowed;
+    color: white;
+    font-size: 12px;
+}
+
+.view-more-courses {
+    width: 100px;
+    height: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    align-items: center;
+    border: 1px solid white;
+    color: #be32f5;
+    border-radius: 25px;
+    margin-right: 15px;
+    background-color: white;
+    box-shadow: 2px 0px 400px -18px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 0px 400px -18px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 0px 400px -18px rgba(0,0,0,0.75);
+}
+
+.main-page {
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    padding: 0 45px;
+    height: 100%;
+    width: 50%;
+}
+
+.left-section-text {
+    color: white;
+}
+
+
+#scroll-to-courses {
+    position: absolute;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+#scroll-to-courses img {
+    position: relative;
+    animation: mouvement-down 1s linear infinite;
+}
+
+@keyframes mouvement-down {
+    0% {
+      bottom: 2px;
+    }
+
+    60% {
+        bottom: -2px;
+    }
+
+    100% {
+        bottom: 2px;
+    }
+}
+
+.fill-form button {
+    height: 40px;
+    width: 180px;
+    position: relative;
+    left: -4px;
+    top: 1px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.right-section {
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 75px;
+}
+
+.right-section-image {
+    position: relative;
+    left: -3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    height: auto;
+    width: 45vw;
+    padding: 0 45px 0 0;
+    margin-top: auto;
+}
+
+.right-section-image img {
+    width: 100%;
+}
+
+
+.courses-display {
+    width: 92%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 50px 0 0 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+}
+
+.discord-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+.discord-link a {
+    text-decoration: none;
+}
+
+.discord-link p {
+    margin: 0 0 2vw 0;
+    font-size: 3vw;
+}
+
+.discord-link button {
+    height: 50px;
+    width: 10vw;
+    min-width: 160px;
+    background-color: #851bef;
+    color: white;
+    font-family: poppins;
+    font-weight: 600;
+    border: 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.discord-link button::after {
+    content: '➜';
+    margin-left: 15px;
+    position: relative;
+}
+
+.discord-link button:hover::after {
+    animation: mouvement 1s linear infinite;
+}
+
+@keyframes mouvement {
+    0% {
+      left: 0;
+    }
+
+    60% {
+        left: 5px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.courses-display-title {
+    font-size: 6vh;
+    margin: 0 auto -30px auto;
+    text-align: left;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+.courses-grids {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 75px 0 75px;
+    margin: 10vh 0 0 0;
+    justify-content: space-around;
+    align-items: center;
+    transition: opacity 0.7s ease-in-out;
+    font-size: 2vh;
+    font-family: poppins;
+    font-weight: 600;
+}
+
+.courses-grids a {
+    text-decoration: none;
+    color: #851bef;
+}
+
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8 {
+    height: 6vh;
+    width: 6vh;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid1:hover {
+    transform: translateY(-10px);
+} 
+
+.grid2:hover {
+    transform: translateY(-10px);
+} 
+
+.grid3:hover {
+    transform: translateY(-10px);
+} 
+
+.grid4:hover {
+    transform: translateY(-10px);
+}
+
+.grid5:hover {
+    transform: translateY(-10px);
+}
+
+.grid6:hover {
+    transform: translateY(-10px);
+}
+
+.grid7:hover {
+    transform: translateY(-10px);
+}
+
+.grid8:hover {
+    transform: translateY(-10px);
+}
+
+.leave-email-for-newsletter {
+    margin: 0 auto;
+    height: 50vh;
+    width: 100%;
+    background-color: #851bef;
+}
+
+.title-for-newsletter {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-for-newsletter p {
+    font-size: 5vh;
+    color: white;
+    font-weight: 300;
+    margin: 25px 0 0 45px;
+}
+
+.title-for-newsletter img {
+    margin: 25px 45px 0 0;
+    height: 4vw;
+}
+
+.comming-soon-newsletter {
+    font-size: 6vh;
+    height: 80%;
+    font-weight: 900;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer {
+    width: 100%;
+    height: 20px;
+}
+
+
+ /*Phone Version*/
+@media (max-width: 768px) {
+
+    .left-nav h2 {
+        font-size: 3vw;
+    }
+    
+    .grid5, .grid6, .grid7, .grid8 {
+        display: none;
+    }
+
+    .right-section {
+        display: none;
+    }
+
+    .right-nav {
+        display: none;
+    }
+
+    .left-section {
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        font-size: 15px;
+        justify-content: space-evenly;
+    }
+
+    .courses-display-title {
+        font-size: 20px;
+    }
+
+    .courses-grids {
+        width: 80%;
+        font-size: 0;
+        margin: 45px 15px;
+    }
+
+    .discord-link {
+        position: relative;
+        top: 0;
+    }
+
+    .discord-link p {
+        font-size: 35px;
+        margin-bottom: 15vh;
+    }
+
+    #scroll-div {
+        display: block;
+        overflow-x: hidden;
+    }
+
+    .title-for-newsletter p {
+        font-size: 14px;
+        margin: 15px;
+    }
+
+    .title-for-newsletter img {
+        height: 20px;
+        margin: 15px;
+    }
+
+    .comming-soon-newsletter {
+        font-size: 25px;
+    }
+
+}
